@@ -157,17 +157,17 @@ def histogram_viz(
         name="normal_std_selector",
         fields=["log_std"],
         bind=normal_std_slider,
-        init={"log_std": 0},
+        value=[{"log_std": 0}],
     )
     normal_samples_selector = alt.selection_single(
         name="normal_samples_selector",
         fields=["log_normal_samples"],
         bind=normal_samples_slider,
-        init={"log_normal_samples": 12},
+        value=[{"log_normal_samples": 12}],
     )
     distr_selector = alt.selection_multi(
         fields=["number_format"],
-        init=[{"number_format": format_name} for format_name in formats.keys()]
+        value=[{"number_format": format_name} for format_name in formats.keys()]
         + [{"number_format": normal_name}],
     )
 

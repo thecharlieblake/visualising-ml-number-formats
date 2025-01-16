@@ -17,11 +17,11 @@ if __name__ == "__main__":
         "TF32": IEEE754BinaryFormat(8, 10),
         "BF16": IEEE754BinaryFormat(8, 7),
         "FP16": IEEE754BinaryFormat(5, 10),
-        "FP8_1.5.2_GAQ": GAQProposedFormat(5, 2, custom_bias=16),
-        "FP8_E5M2_NAI": IEEE754BinaryFormat(5, 2),
+        # "FP8_1.5.2_GAQ": GAQProposedFormat(5, 2, custom_bias=16),
+        "FP8_E5": IEEE754BinaryFormat(5, 2),
         "INT8x512": ScaledTwosComplementFormat(8, scale=2**9),
-        "FP8_1.4.3_GAQ": GAQProposedFormat(4, 3, custom_bias=8),
-        "FP8_E4M3_NAI": NAIProposedFormat(4, 3),
+        # "FP8_1.4.3_GAQ": GAQProposedFormat(4, 3, custom_bias=8),
+        "FP8_E4": NAIProposedFormat(4, 3),
         "INT8x2": ScaledTwosComplementFormat(8, scale=2),
     }
     table_viz(formats)
